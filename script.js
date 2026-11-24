@@ -45,6 +45,22 @@ async function getRecipe() {
     cuisine.textContent = `Cuisine: ${recipe.cuisine}`;
     card.appendChild(cuisine);
 
+    const rating = document.createElement("p");
+    rating.textContent = `Rating: ${recipe.rating}`;
+    card.appendChild(rating);
+
+    const prepTime = document.createElement("p");
+    prepTime.textContent = `Prep Time: ${recipe.prepTimeMinutes} minutes`;
+    card.appendChild(prepTime);
+
+    const difficulty = document.createElement("p");
+    difficulty.textContent = `Difficulty: ${recipe.difficulty}`;
+    card.appendChild(difficulty);
+
+    const mealType = document.createElement("p");
+    mealType.textContent = `Meal Type: ${recipe.mealType}`;
+    card.appendChild(mealType);
+
     const img = document.createElement("img");
     img.src = recipe.image;
     img.alt = recipe.name;
